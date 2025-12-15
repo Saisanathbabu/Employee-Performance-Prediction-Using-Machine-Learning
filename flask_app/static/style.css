@@ -1,0 +1,272 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100vh;
+  background-color: #12002c;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Navigation Bar */
+nav {
+  background: #1f003d;
+  height: 72px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+nav h2 {
+  font-size: 20px;
+  color: #f0f0f0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+  height: calc(100vh - 72px);
+  background: url("home_bg.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  margin-top: 72px;
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 51px;
+  font-size: 51px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.start-btn,
+.submit-btn,
+.try-again-btn {
+  background: #ffcc00;
+  color: #12002c;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.start-btn:hover,
+.submit-btn:hover,
+.try-again-btn:hover {
+  background: #ffaa00;
+}
+
+/* Form Section (Predict Page) */
+.form-section {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 60px 50px;
+    background-image: url("s.png");
+}
+
+.form-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.form-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grid label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-grid input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Result Section */
+.result-section {
+  height: calc(100vh - 72px);
+  position: relative;
+  background-color: #12002c;
+  background-image: url("s.png");
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.popup-box {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f003d;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+}
+
+.popup-box h1 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.prediction-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* About Section */
+.about-section {
+  height: calc(100vh - 72px);
+  width: 100%;
+  margin-top: 72px;
+  padding: 40px 60px;
+  background: #1f003d url("abou.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.about-section h1 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  color: #ffaa00;
+  margin-top: 30px;
+  margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .popup-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .about-section {
+    padding: 20px;
+    margin-top: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .start-btn,
+  .submit-btn,
+  .try-again-btn {
+    width: 100%;
+    padding: 15px;
+  }
+}

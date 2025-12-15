@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Productivity Prediction Using ML</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h2>Employee Productivity Prediction Using ML</h2>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('predict') }}">Predict</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Enhancing Productivity Through Machine Learning</h1>
+      <p >
+        Predict employee performance, understand productivity metrics, and improve workforce efficiency using advanced ML algorithms.
+      </p>
+      <a href="{{ url_for('predict') }}"><button class="start-btn">Start Prediction</button></a>
+    </div>
+  </section>
+</body>
+</html>

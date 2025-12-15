@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h2>Employee Productivity Prediction Using ML</h2>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('predict') }}">Predict</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h1>About This Project</h1>
+    <p>
+      This web application leverages Machine Learning to predict employee productivity based on multiple factors such as department, team, targeted productivity, overtime, incentives, idle time, and more.
+    </p>
+
+    <h2>Dataset</h2>
+    <p>
+      The dataset includes employee performance metrics collected across different quarters, departments, and teams. It provides insights into productivity trends and workforce efficiency.
+    </p>
+
+    <h2>Machine Learning Approach</h2>
+    <p>
+      We trained models using <strong>Linear Regression,Random forest</strong> and <strong>XGBoost</strong> to analyze productivity patterns. The final model is saved as <code>gwp.pkl</code> and integrated into this Flask application for real-time predictions which is this application
+
+    </p>
+
+    <h2>Purpose</h2>
+    <p>
+      The goal of this project is to help organizations identify productivity drivers, optimize workforce management, and enhance overall efficiency using data-driven insights.
+    </p>
+  </section>
+</body>
+</html>

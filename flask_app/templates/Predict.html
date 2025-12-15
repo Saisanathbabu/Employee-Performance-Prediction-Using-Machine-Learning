@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Employee Productivity</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h2>Employee Productivity Prediction Using ML</h2>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('predict') }}">Predict</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Prediction Form -->
+  <section class="form-section">
+    <h1>Enter Employee Details</h1>
+    <form action="{{ url_for('predict') }}" method="POST">
+
+      <label>Quarter:</label>
+      <input type="number" name="quarter" min="0" required><br>
+
+      <label>Department:</label>
+      <input type="number" name="department" min="0" required><br>
+
+      <label>Day:</label>
+      <input type="number" name="day" min="1" style="width: 250px; " placeholder="Enter from (1)Sunday to Saturday(7)" required><br>
+
+      <label>Team:</label>
+      <input type="number" name="team" required><br>
+
+      <label>Targeted Productivity:</label>
+      <input type="text" name="targeted_productivity" required><br>
+
+      <label>SMV:</label>
+      <input type="text" name="smv" required><br>
+
+      <label>Over Time:</label>
+      <input type="number" name="over_time" required><br>
+
+      <label>Incentive:</label>
+      <input type="number" name="incentive" required><br>
+
+      <label>Idle Time:</label>
+      <input type="text" name="idle_time" required><br>
+
+      <label>Idle Men:</label>
+      <input type="number" name="idle_men" required><br>
+
+      <label>No. of Style Change:</label>
+      <input type="number" name="no_of_style_change" required><br>
+
+      <label>No. of Workers:</label>
+      <input type="text" name="no_of_workers" required><br>
+
+      <label>Month:</label>
+      <input type="number" name="month" required><br>
+
+      <button type="submit" class="submit-btn">Predict</button>
+    </form>
+  </section>
+</body>
+</html>
