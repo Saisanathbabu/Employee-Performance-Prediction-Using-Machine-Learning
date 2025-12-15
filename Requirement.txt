@@ -1,0 +1,7 @@
+- Flask → runs your web app
+- scikit-learn → ML training & prediction
+- xgboost → boosting model for productivity prediction
+- pandas → dataset handling
+- numpy → numerical operations
+- joblib → saving/loading ML models (model.pkl)
+- matplotlib → optional visualizations
