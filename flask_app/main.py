@@ -41,9 +41,9 @@ def predict():
         prediction = model.predict(features)[0]
 
         # Convert prediction into readable text
-        if prediction < 0.5:
+        if prediction < 0.3:
             prediction_text = "The employee is averagely productive."
-        elif prediction < 0.75:
+        elif prediction >0.3 and prediction<=0.8:
             prediction_text = "The employee is medium productive."
         else:
             prediction_text = "The employee is highly productive."
