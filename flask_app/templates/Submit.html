@@ -20,7 +20,7 @@
 <section class="result-section">
   <div class="popup-box">
     <h1>Prediction Result</h1>
-    <p class="prediction-text">The employee is highly productive.</p>
+    <p class="prediction-text">{{ prediction_text }}</p>
     <a href="{{ url_for('predict') }}" class="try-again-btn">Try Again</a>
   </div>
 </section>
@@ -29,3 +29,4 @@
 </body>
 
 </html>
+
